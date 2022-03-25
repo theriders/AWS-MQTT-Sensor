@@ -22,6 +22,6 @@ void log_error_if_nonzero(const char *message, int error_code);
  * @param event_data The data for the event, esp_mqtt_event_handle_t.
  */
 void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data);
-void mqtt_app_start(const char* mqtt_broker_url);
+void mqtt_app_start(const char* mqtt_broker_url, esp_mqtt_client_handle_t* client);
 
 #endif /* __MQTT_H_ */

@@ -6,6 +6,8 @@
 /***************************************************************************************************/
 // WiFi
 #include "wifi.h"
+// MQTT
+#include "mqtt.h"
 // I2C devices
 #include "oled.h"
 #include "htu21d.h"
@@ -26,6 +28,7 @@ typedef struct {
     htu21_t htu21;
     ssd1306_t ssd1306;
     wifi_creds_t wifi_creds;
+    esp_mqtt_client_handle_t mqtt_client;
 } host_t;
 
 void init_host(host_t* );
