@@ -69,7 +69,8 @@ void mqtt_app_start(const char* mqtt_broker_url, esp_mqtt_client_handle_t* clien
         .uri = mqtt_broker_url,
         .cert_pem = AWS_ROOT_CA,         // AWS CA
         .client_cert_pem = DEVICE_CERT,  // Device Certificate
-        .client_key_pem = PRIV_KEY       // Private key
+        .client_key_pem = PRIV_KEY,       // Private key
+        .client_id = "IoT_Board"          //Client ID
     };
 
     *client = esp_mqtt_client_init(&mqtt_cfg);
